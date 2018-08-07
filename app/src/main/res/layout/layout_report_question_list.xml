@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50sp"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3sp"
+            android:layout_marginRight="3sp"
+            android:layout_marginTop="3sp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="50sp"
+                android:background="@drawable/half_rounded_circle_notattempt"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/text_view_question_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="1"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10sp"
+                android:background="#ffffff"
+                android:fontFamily="sans-serif"
+                android:padding="15sp"
+                android:text="Please Choose Option.."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:id="@+id/linearCompQues">
+
+            </LinearLayout>
+
+           <!-- <TextView
+                android:id="@+id/text_view_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:autoSizeTextType="uniform"
+                android:text="Please Choose Correct Option..." />-->
+
+
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/img_quest_report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="#ffffff"
+            android:fontFamily="sans-serif"
+            android:padding="15sp"
+            android:text="Please Choose Option.."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/llopt1">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="#ffffff"
+            android:fontFamily="sans-serif"
+            android:padding="15sp"
+            android:text="Please Choose Option.."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/llopt2">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="#ffffff"
+            android:fontFamily="sans-serif"
+            android:padding="15sp"
+            android:text="Please Choose Option.."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/llopt3">
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10sp"
+            android:background="#ffffff"
+            android:fontFamily="sans-serif"
+            android:padding="15sp"
+            android:text="Please Choose Option.."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:id="@+id/llopt4">
+
+        </LinearLayout>
+
+
+<!--        <TextView
+            android:id="@+id/opt_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="option1"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/opt_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="option2"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/opt_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="option3"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/opt_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:autoSizeTextType="uniform"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="option4"
+            android:textSize="15sp"
+            android:visibility="gone" />-->
+
+
+        <TextView
+            android:id="@+id/tv_true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="True"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="False"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="Yes"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/border"
+            android:padding="10sp"
+            android:text="No"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

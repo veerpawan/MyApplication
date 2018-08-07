@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--  <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Please Enter Mobile Number"
+          android:textColor="@color/white"
+          android:background="@color/black"
+          android:padding="10dp"
+          android:gravity="center"/>
+  -->
+    <EditText
+        android:id="@+id/ed_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:hint="Enter Your 10 Digit Mobile Number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textColor="#000000"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="129dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@color/black"
+        android:text="Submit"
+        android:textColor="#ffffff"
+        android:textSize="13dp" />
+</LinearLayout>

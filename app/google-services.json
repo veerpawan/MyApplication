@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "741553748267",
+    "firebase_url": "https://myfcmapp-cf68e.firebaseio.com",
+    "project_id": "myfcmapp-cf68e",
+    "storage_bucket": "myfcmapp-cf68e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741553748267:android:480ed0f22db9f2bb",
+        "android_client_info": {
+          "package_name": "testtaking.app.com.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741553748267-vls11m85njgcu7fu89od85nkampn8qfa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "testtaking.app.com.myapplication",
+            "certificate_hash": "67600f05f998e7db17548354815716b4a0945e29"
+          }
+        },
+        {
+          "client_id": "741553748267-9ua2tqerv8cbghlab22sbvt5kklop746.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzrHMToomn_LWCicx06H_glfTuBQmpSa0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741553748267-9ua2tqerv8cbghlab22sbvt5kklop746.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

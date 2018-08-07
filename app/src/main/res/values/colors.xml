@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#020af1</color>
+    <color name="colorPrimaryDark">#010b48</color>
+    <color name="colorAccent">#007CC2</color>
+    <color name="cardviewcolor">#F0F8FF</color>
+    <color name="screencardViewcolor">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="selficoncolor">#393185</color>
+
+
+    <color name="backgroundc">#e1e7f4</color>
+    <color name="wallet_link_text_light">#ffee00</color>
+    <color name="lightred">#f8100c</color>
+    <color name="red">#f2100c</color>
+    <color name="dark_red">#40000c</color>
+    <color name="window_background">#FFF5F5F5</color>
+    <color name="darkred">#d9082b</color>
+    <color name="darkblue">#043341</color>
+    <color name="choclate">#372c24</color>
+    <color name="black">#000000</color>
+    <color name="skyblue">#0389ff</color>
+    <color name="gray">#e5e8ec</color>
+    <color name="graydark">#bec2c6</color>
+    <color name="yellow">#fbff00</color>
+
+    <!-- Screens background color-->
+    <color name="bg_slider_screen6">#16bc7d</color>
+    <color name="bg_slider_screen1">#f4b241</color>
+    <color name="bg_slider_screen2">#16bc7d</color>
+    <color name="bg_slider_screen3">#203d8c</color>
+    <color name="bg_slider_screen4">#f4b241</color>
+    <color name="bg_slider_screen5">#16bc7d</color>
+
+
+    <!-- dots inactive colors -->
+    <color name="dot_inactive_screen6">#16bc7d</color>
+    <color name="dot_inactive_screen1">#ffa000</color>
+    <color name="dot_inactive_screen2">#008c57</color>
+    <color name="dot_inactive_screen3">#0e1e49</color>
+    <color name="dot_inactive_screen4">#fceed5</color>
+    <color name="dot_inactive_screen5">#16bc7d</color>
+
+    <!-- dots active colors -->
+    <color name="dot_active_screen6">#008c57</color>
+    <color name="dot_active_screen1">#f9c772</color>
+    <color name="dot_active_screen2">#74f7c5</color>
+    <color name="dot_active_screen3">#3a67e0</color>
+    <color name="dot_active_screen4">#ffa000</color>
+    <color name="dot_active_screen5">#008c57</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTabTextSelectedColor">#1f9fc1</color>
+    <color name="colorTabTextUnSelectedColor">#848484</color>
+    <color name="colorDrawerMenu">#D2D1D1</color>
+    <color name="colorButtonGreen">#1FB0A9</color>
+    <color name="Colorblack">#ff000000</color>
+    <color name="ColorGreyText">#838383</color>
+    <color name="mdtp_accent_color">#448AFF</color>
+    <color name="mdtp_accent_color_dark">#448AFF</color>
+    <color name="events_grid">#912565</color>
+    <color name="join_community_grid">#923BCA</color>
+    <color name="promotions_grid">#6EA04B</color>
+    <color name="batches_grid">#ff8a65</color>
+    <color name="colorGreen">#49D63C</color>
+    <color name="colorRed">#FD5353</color>
+    <color name="colorControlNormal">#000</color>
+    <color name="colorButtonGrey">#2d2d2d</color>
+    <color name="unselected_text_color">#7D7D7D</color>
+    <color name="colorPurpule">#933EC5</color>
+    <color name="greyTextColor">#5B5B5B</color>
+    <color name="greybg">#efefef</color>
+    <color name="secondary_text">#757575</color>
+    <color name="primary_text">#212121</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="light_grey">#D7D7D7</color>
+    <color name="normal_tag_color">#D8D8D8</color>
+    <color name="tag_press">#5fc3e4</color>
+    <color name="new_orange_color_no_alpha">#D84315</color>
+    <color name="new_red_color_no_alpha">#C62828</color>
+    <color name="new_green_color_no_alpha">#2E7D32</color>
+    <color name="new_purple_color_no_alpha">#6A1B9A</color>
+    <color name="new_blue_color_no_alpha">#1565C0</color>
+    <color name="seleti_color">#303846</color>
+    <color name="freshchat_notification_accent_color">@color/new_blue_color_no_alpha</color>
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#2FB9FB</color>
+    <color name="dot_dark_screen2">#214CCE</color>
+    <color name="dot_dark_screen3">#1C98C5</color>
+    <color name="dot_dark_screen4">#051B3F</color>
+    <color name="dot_dark_screen5">#23C497</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#90C4FA</color>
+    <color name="dot_light_screen2">#5675F9</color>
+    <color name="dot_light_screen3">#06C1AF</color>
+    <color name="dot_light_screen4">#28280D</color>
+    <color name="dot_light_screen5">#93C4C8</color>
+    <color name="color_clicked">#aa8c52</color>
+    <color name="colorExploreHeading">#848484</color>
+    <color name="background_high">#b2e0f4</color>
+
+
+    <color name="placeholder_bg">#dddddd</color>
+
+
+    <color name="grey">#6dcfc9c9</color>
+    <color name="green">#48e145</color>
+    <color name="darkgrey">#606160</color>
+
+    <color name="orange">#efb218</color>
+
+
+</resources>

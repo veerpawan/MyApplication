@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_class"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="0.0px"
+    android:minHeight="50dp"
+    app:cardPreventCornerOverlap="false">
+
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/crd_chapter" />
+
+        <View
+            android:layout_width=".5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="#b6b6b7" />
+
+
+        <TextView
+            android:id="@+id/text_view_topic_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15sp"
+            android:textAlignment="center"
+            android:textColor="#861a07"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

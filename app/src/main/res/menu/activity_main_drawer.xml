@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+
+        <!--  <item
+              android:id="@+id/nav_student_pro"
+              android:icon="@drawable/ic_studttips_black_24dp"
+              android:title="Profile" />
+  -->
+
+        <group
+
+
+            android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_self_enabler"
+                android:icon="@drawable/selficon"
+                android:title="SelfEnabler" />
+        </group>
+
+
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_anytimetutor"
+                android:icon="@drawable/teacher"
+                android:title="3 AM Friend" />
+        </group>
+
+        <group android:checkableBehavior="single">
+
+
+            <item
+                android:id="@+id/nav_expertshere"
+                android:icon="@drawable/teaccher"
+                android:title="Experts Here" />
+        </group>
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/self"
+                android:title="Talent4Assure" />
+
+        </group>
+
+
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_saath_foundation"
+                android:icon="@drawable/saathlogo"
+                android:title="Saath Foundation" />
+        </group>
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_best"
+                android:icon="@drawable/best7"
+                android:title="BEST" />
+
+        </group>
+
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_notification"
+                android:icon="@drawable/ic_notifications_black_24dp"
+                android:title="Notification" />
+        </group>
+
+
+        <group android:checkableBehavior="single">
+
+            <item
+                android:id="@+id/nav_setting"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Logout" />
+        </group>
+    </group>
+
+
+</menu>

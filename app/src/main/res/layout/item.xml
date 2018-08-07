@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+
+        <TextView
+            android:id="@+id/question_number"
+            android:layout_width="2dp"
+            android:layout_height="30sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/half_rounded_circle"
+            android:gravity="center_vertical"
+            android:text="Number"
+            android:textAlignment="center"
+            android:textColor="#ffffff" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button_green_bg"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10sp"
+                android:background="#ffffff"
+                android:fontFamily="sans-serif"
+                android:padding="15sp"
+                android:text="Please Choose Option.."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                 android:id="@+id/linearCompQues">
+
+            </LinearLayout>
+
+           <!-- <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:background="#ffffff"
+                android:fontFamily="sans-serif"
+                android:padding="15sp"
+                android:text="Please Choose Option.."
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />-->
+
+
+            <ImageView
+                android:id="@+id/img_quest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:text="Options :"
+                android:textSize="12sp" />
+
+
+            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:measureAllChildren="true"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_opt_cards"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rd_options"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10sp"
+                        android:orientation="vertical">
+
+
+                        <RadioButton
+                            android:id="@+id/rd_o_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:background="@drawable/white_bg"
+                            android:padding="15sp"
+
+                            android:textSize="16sp" />
+
+
+                        <ImageView
+                            android:id="@+id/img_opt_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY" />
+
+                        <RadioButton
+                            android:id="@+id/rd_o_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:background="@drawable/white_bg"
+                            android:padding="15sp"
+                            android:textSize="16sp" />
+
+
+                        <ImageView
+                            android:id="@+id/img_opt_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY" />
+
+
+                        <RadioButton
+                            android:id="@+id/rd_o_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:background="@drawable/white_bg"
+                            android:padding="15sp"
+                            android:textSize="16sp" />
+
+
+                        <ImageView
+                            android:id="@+id/img_opt_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY" />
+
+
+                        <RadioButton
+                            android:id="@+id/rd_o_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10sp"
+                            android:background="@drawable/white_bg"
+                            android:padding="15sp"
+                            android:textSize="16sp" />
+
+
+                        <ImageView
+                            android:id="@+id/img_opt_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <RadioGroup
+                    android:id="@+id/rd_tf"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10sp"
+                    android:orientation="vertical">
+
+
+                    <RadioButton
+                        android:id="@+id/rd_true"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/white_bg"
+
+                        android:padding="15sp"
+                        android:text="True"
+                        android:textSize="16sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/rd_false"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/white_bg"
+
+                        android:padding="15sp"
+                        android:text="False"
+
+                        android:textSize="16sp" />
+                    <!--  </android.support.v7.widget.CardView>-->
+
+                </RadioGroup>
+
+
+                <RadioGroup
+                    android:id="@+id/rd_yn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10sp"
+                    android:orientation="vertical">
+
+
+                    <RadioButton
+                        android:id="@+id/rd_yes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/white_bg"
+                        android:padding="15sp"
+                        android:text="Yes"
+                        android:textSize="16sp" />
+
+
+                    <RadioButton
+                        android:id="@+id/rd_no"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/white_bg"
+                        android:padding="15sp"
+                        android:text="No"
+
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+
+

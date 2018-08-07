@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_quiz_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_view_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_list"
+                tools:ignore="RtlCompat,VectorDrawableCompat" />
+
+            <ImageView
+                android:id="@+id/image_view_grid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/image_view_list"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:padding="4dp"
+                app:srcCompat="@drawable/ic_grid"
+                tools:ignore="VectorDrawableCompat" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_questions_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_submit"
+                android:layout_below="@+id/image_view_list"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                app:reverseLayout="false"
+                tools:listitem="@layout/layout_question_list">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_submit"
+                android:layout_below="@+id/image_view_list"
+                android:layout_marginTop="10dp"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                app:reverseLayout="false"
+                tools:listitem="@layout/layout_question_number">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/ll_submit"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#9f9797" />
+
+                <TextView
+                    android:id="@+id/text_view_answered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:drawableLeft="@drawable/circle_green"
+                    android:drawablePadding="6dp"
+                    android:text="Answered"
+                    android:textColor="#3cb878"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_view_not_visited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/text_view_answered"
+                    android:drawableLeft="@drawable/circle_not_visted"
+                    android:drawablePadding="6dp"
+                    android:text="Not Visited"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/text_view_unanswered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_view_answered"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/circle_red"
+                    android:drawablePadding="6dp"
+                    android:text="Skipped"
+                    android:textColor="#f26d7d"
+                    android:textSize="14sp" />
+
+               <!-- <TextView
+                    android:id="@+id/text_view_marked_for_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_view_not_visited"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_view_unanswered"
+                    android:drawableLeft="@drawable/ic_star_quiz"
+                    android:drawablePadding="6dp"
+                    android:text="Marked For Review"
+                    android:textColor="#efce4a"
+                    android:textSize="14sp" />
+
+
+                <Button
+                    android:id="@+id/button_submit_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_button_green_bg"
+                    android:text="Submit"
+                    android:textColor="@color/colorWhite" />-->
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

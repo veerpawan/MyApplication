@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="testtaking.app.com.myapplication.activity.ThreeAmFriendActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="#FFFFFF"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:id="@+id/rlBack"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ivTAFBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_back_black_24dp" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="148dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="right"
+                        android:foregroundGravity="right"
+                        android:src="@drawable/selfenabler_logoo" />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:src="@drawable/teacher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:padding="15dp"
+            android:text="SelfEnabler offers a platform to solve questions, doubts and queries, which make exam prep and homework simpler and easy. Anytime Tutor is an online tutor service provided to the students who are in any of the classes from 6th to 12th or are preparing for any sort of competitive exams like SSC, Bank PO, UPSC etc so that their doubts do not remain unanswered even at odd hours of the day. Our team of Expert Online Tutors also helps student to prepare for their entrance exams like NEET, JEE, CBSE, ICSE and State Board Exams by clearing their doubts."
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

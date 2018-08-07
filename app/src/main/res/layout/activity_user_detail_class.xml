@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/education1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+
+            <ImageView
+                android:layout_width="287dp"
+                android:layout_height="41dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:foregroundGravity="right"
+                android:src="@drawable/selfenabler_logoo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="55dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Medium"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/selficoncolor"
+                    app:met_floatingLabel="normal"
+                    app:met_textColorHint="#757575" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Board"
+                    android:paddingLeft="10dp"
+                    app:met_floatingLabel="normal"
+                    app:met_textColorHint="#757575" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spClass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Class"
+                    android:paddingLeft="10dp"
+                    app:met_floatingLabel="normal"
+                    app:met_textColorHint="#757575" />
+
+                <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+                    android:id="@+id/spStream"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Stream"
+                    android:paddingLeft="10dp"
+                    app:met_floatingLabel="normal"
+                    app:met_textColorHint="#757575" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_classdetail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginRight="16.0dip"
+                android:layout_marginTop="30.0dip"
+                android:background="@drawable/border1"
+                android:elevation="10dp"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="#ffffffff"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

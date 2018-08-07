@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        card_view:cardBackgroundColor="#ffffff"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_test_d_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="Test Description"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="#cdcdce" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="20dp"
+                android:background="#000000"
+                android:text="Start Test"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <!-- <android.support.v7.widget.CardView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+         android:layout_margin="5dp"
+         card_view:cardBackgroundColor="#ffffff"
+         card_view:cardCornerRadius="3dp"
+         card_view:cardElevation="5dp">
+
+         &lt;!&ndash; <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+              android:orientation="vertical">
+
+
+              <TextView
+                  android:id="@+id/tv_d_test_id"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textColor="#000000" />
+
+
+              <TextView
+                  android:id="@+id/tv_test_d_description"
+                  android:layout_width="match_parent"
+                  android:gravity="center"
+                  android:layout_height="wrap_content"
+                  android:textStyle="bold" />
+
+
+
+
+
+          </LinearLayout>&ndash;&gt;
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             android:padding="10dp">
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:text="Test ID                       :"
+                     android:textColor="@color/purple"
+                     android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tv_d_test_id"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:ellipsize="end"
+                     android:maxLines="2"
+                     android:textColor="#000000" />
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:text="Test Description      :"
+                     android:textColor="@color/purple"
+                     android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tv_test_d_description"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:maxLines="4"
+                     android:textColor="#000000" />
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:text="Test Duration            :"
+                     android:textColor="@color/purple"
+                     android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tv_test_d_duration"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:ellipsize="end"
+                     android:maxLines="2"
+                     android:textColor="#000000" />
+             </LinearLayout>
+
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal">
+
+                 <TextView
+                     android:id="@+id/textView4"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:text="TestScore                  :"
+                     android:textColor="@color/purple"
+                     android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tv_test_d_testscore"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:ellipsize="end"
+                     android:maxLines="2"
+                     android:textColor="#000000" />
+             </LinearLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:orientation="horizontal">
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="15dp"
+                     android:text="No of question          :"
+                     android:textColor="@color/purple"
+                     android:textStyle="bold" />
+
+                 <TextView
+                     android:id="@+id/tv_test_d_noquestion"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:textColor="#000000" />
+             </LinearLayout>
+
+             <Button
+                 android:id="@+id/btn_demo_test"
+                 android:layout_width="match_parent"
+                 android:layout_height="33dp"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="7dp"
+                 android:background="@drawable/mybutton"
+                 android:text="Schedule Test"
+                 android:textColor="#ffffff"
+                 android:textSize="10dp" />
+
+
+         </LinearLayout>
+
+     </android.support.v7.widget.CardView>-->
+
+</LinearLayout>
