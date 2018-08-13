@@ -34,12 +34,14 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_navigation);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+        //toolbar = getSupportActionBar();
         toolbar = getSupportActionBar();
+
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         BottomNavigationViewHelper.disableShiftMode(navigation);
         navigation.setOnNavigationItemSelectedListener(this);
-        toolbar.setTitle("Home");
+        // toolbar.setTitle("Home");
         loadFragment(new Home());
 
     }
@@ -73,7 +75,7 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
 
         switch (item.getItemId()) {
             case R.id.navigation_home:
-                toolbar.setTitle("Home");
+                toolbar.setTitle("SelfEnabler");
                 fragment = new Home();
                 loadFragment(fragment);
                 return true;

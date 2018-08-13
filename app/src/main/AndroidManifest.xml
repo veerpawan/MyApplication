@@ -40,9 +40,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.BottomNavigationActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppThemeBottom">
+            android:name=".activity.splash"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -188,7 +187,9 @@
 
         <activity android:name=".activity.TopicActivity" />
         <activity android:name=".activity.PracticeTest" />
-        <activity android:name=".activity.splash" />
+        <activity
+            android:name=".activity.BottomNavigationActivity"
+            android:theme="@style/AppThemeBottom" />
 
     </application>
 

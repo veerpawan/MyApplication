@@ -29,6 +29,30 @@ public class HomeQuestionList {
     @SerializedName("post_image_name")
     private String post_image_name;
 
+
+    @SerializedName("attemptSize")
+    private int attemptSize;
+
+    @SerializedName("upvoteSize")
+    private int upvoteSize;
+
+
+    public int getAttemptSize() {
+        return attemptSize;
+    }
+
+    public void setAttemptSize(int attemptSize) {
+        this.attemptSize = attemptSize;
+    }
+
+    public int getUpvoteSize() {
+        return upvoteSize;
+    }
+
+    public void setUpvoteSize(int upvoteSize) {
+        this.upvoteSize = upvoteSize;
+    }
+
     @SerializedName("options")
     private HomeQuestionOptions homeQuestionOptions;
 

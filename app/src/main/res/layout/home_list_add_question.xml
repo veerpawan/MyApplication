@@ -48,9 +48,9 @@
                             android:id="@+id/image_home_mcq_student"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="#044e03"
+                            android:src="@drawable/users"
                             app:civ_border_color="#000000"
-                            app:civ_border_width="2dp" />
+                            app:civ_border_width="1dp" />
 
 
                         <LinearLayout
@@ -70,6 +70,7 @@
                                 android:textSize="15dp"
                                 android:textStyle="normal" />
 
+
                             <TextView
                                 android:id="@+id/txt_post_type_mcq"
                                 android:layout_width="match_parent"
@@ -79,7 +80,6 @@
                                 android:text="Now"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                 android:textColor="#b1a3a3"
-                                android:textSize="15dp"
                                 android:textStyle="normal" />
 
                         </LinearLayout>
@@ -104,10 +104,9 @@
                             android:id="@+id/txt_enter_question_home"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="15dp"
+                            android:layout_margin="5dp"
                             android:background="#ffffff"
                             android:hint="Enter Question Text."
-                            android:padding="10dp"
                             android:text="h"
                             android:textColorHint="#b1a3a3"
                             android:textSize="15sp" />
@@ -240,117 +239,41 @@
 
                     </LinearLayout>
 
-                    <!--  <LinearLayout
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
-                          android:layout_marginLeft="5dp"
-                          android:layout_marginRight="5dp"
-                          android:background="@color/white"
-                          android:orientation="horizontal"
-                          android:weightSum="1">
 
-                          <TextView
-                              android:layout_width="20dp"
-                              android:layout_height="20dp"
-                              android:layout_margin="3dp"
-                              android:background="@drawable/shape"
-                              android:text="  E  " />
-
-                          <EditText
-                              android:id="@+id/et_option5_mcq"
-                              android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:layout_marginRight="@dimen/ask"
-                              android:layout_weight="0.9"
-                              android:hint="Option 5"
-                              android:maxEms="1"
-                              android:maxLines="1"
-                              android:textColorHint="#b1a3a3"
-                              android:textSize="15sp" />
-
-                      </LinearLayout>-->
-                  <!--  <LinearLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="bottom"
-                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5sp"
+                        android:layout_marginTop="5sp"
                         android:weightSum="3">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/mcq_attempts"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
+                            android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
+                            android:gravity="center_horizontal" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/thumbsuppp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="UPVOTE"
-                                android:textColor="@color/darkgrey"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/mcq_upvote"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/cmnticonsss" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text=" COMMENT"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/mcq_comments"
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_weight="1"
-                            android:orientation="horizontal"
-                            android:weightSum="2">
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
 
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:src="@drawable/shareee" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="SHARE"
-                                android:textSize="12sp" />
-                        </LinearLayout>
-
-                    </LinearLayout>-->
+                    </LinearLayout>
 
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="1dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="50sp"
+                        android:layout_marginTop="10sp"
                         android:background="@color/grey" />
 
                     <LinearLayout
@@ -363,23 +286,22 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
                             android:orientation="horizontal"
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
                                 android:layout_weight="1"
-                                android:src="@drawable/thumbsuppp" />
+                                android:src="@drawable/like" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="UPVOTE"
-                                android:textColor="@color/darkgrey"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="upvote"
+                                android:textAllCaps="false"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -392,16 +314,16 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
-                                android:src="@drawable/cmnticonsss" />
+                                android:src="@drawable/comment" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text=" COMMENT"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text=" comment"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -415,16 +337,16 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
-                                android:src="@drawable/shareee" />
+                                android:src="@drawable/share" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="SHARE"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="share"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -436,8 +358,6 @@
 
         </android.support.v7.widget.CardView>
     </LinearLayout>
-
-    //this layout is for queary layout
 
 
     <LinearLayout
@@ -486,9 +406,9 @@
                             android:id="@+id/image_student_queary_home"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="#044e03"
+                            android:src="@drawable/users"
                             app:civ_border_color="#000000"
-                            app:civ_border_width="2dp" />
+                            app:civ_border_width="1dp" />
 
 
                         <LinearLayout
@@ -517,7 +437,6 @@
                                 android:text="Queary"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                 android:textColor="#b1a3a3"
-                                android:textSize="15dp"
                                 android:textStyle="normal" />
 
                         </LinearLayout>
@@ -542,10 +461,10 @@
                             android:id="@+id/txt_queary_home"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_margin="15dp"
+                            android:layout_margin="5dp"
                             android:background="#ffffff"
                             android:hint="Enter Question Text."
-                            android:padding="10dp"
+
                             android:text="Enter your Queary"
                             android:textColorHint="#b1a3a3"
                             android:textSize="15sp" />
@@ -569,22 +488,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
                             android:orientation="horizontal"
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
                                 android:layout_weight="1"
-                                android:src="@drawable/thumbsuppp" />
+                                android:src="@drawable/like" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="UPVOTE"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="upvote"
+                                android:textAllCaps="false"
+                                android:textColor="@color/darkgrey"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -597,16 +518,16 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
-                                android:src="@drawable/cmnticonsss" />
+                                android:src="@drawable/comment" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text=" COMMENT"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text=" comment"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -620,20 +541,21 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
                                 android:src="@drawable/share" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="SHARE"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="share"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
                     </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>
@@ -687,8 +609,9 @@
                             android:id="@+id/image_student_info_home"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
+                            android:src="@drawable/users"
                             app:civ_border_color="#014302"
-                            app:civ_border_width="2dp" />
+                            app:civ_border_width="1dp" />
 
 
                         <LinearLayout
@@ -717,7 +640,6 @@
                                 android:text="Info"
                                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                                 android:textColor="#b1a3a3"
-                                android:textSize="15dp"
                                 android:textStyle="normal" />
 
                         </LinearLayout>
@@ -768,22 +690,24 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginRight="5dp"
                             android:layout_weight="1"
                             android:orientation="horizontal"
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="right"
                                 android:layout_weight="1"
-                                android:src="@drawable/thumbsuppp" />
+                                android:src="@drawable/like" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="UPVOTE"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="upvote"
+                                android:textAllCaps="false"
+                                android:textColor="@color/darkgrey"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -796,16 +720,16 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
-                                android:src="@drawable/cmnticonsss" />
+                                android:src="@drawable/comment" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text=" COMMENT"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text=" comment"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
@@ -819,16 +743,16 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
-                                android:src="@drawable/shareee" />
+                                android:src="@drawable/share" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="SHARE"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="share"
                                 android:textSize="12sp" />
                         </LinearLayout>
 
