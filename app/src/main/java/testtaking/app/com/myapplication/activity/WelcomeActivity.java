@@ -57,9 +57,7 @@ import testtaking.app.com.myapplication.model.CheckAppUpdate;
 import testtaking.app.com.myapplication.model.OtpStatus;
 import testtaking.app.com.myapplication.network.URL_Mapping;
 
-/**
- * Created by umesh on 25-02-2017.
- */
+
 public class WelcomeActivity extends AppCompatActivity {
     private ViewPager viewPager;
 
