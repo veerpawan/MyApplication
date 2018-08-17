@@ -61,8 +61,9 @@ import testtaking.app.com.myapplication.network.URL_Mapping;
  * Created by umesh on 25-02-2017.
  */
 public class WelcomeActivity extends AppCompatActivity {
-
     private ViewPager viewPager;
+
+    //private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;
     private TextView[] dots;
