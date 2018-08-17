@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-   // public static final String BASE_URL = "https://www.selfenabler.com/";
+   //public static final String BASE_URL = "https://www.selfenabler.com/";
     //http://192.168.0.30:8081/StudentAssessment2/
     public static final String BASE_URL = "http://192.168.0.43:8081/StudentAssessment2/";
     //public static final String BASE_URL = "http://192.168.0.103:8080/StudentAssessment2/";

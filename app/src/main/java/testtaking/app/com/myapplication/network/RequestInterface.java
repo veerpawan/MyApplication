@@ -22,10 +22,12 @@ import testtaking.app.com.myapplication.model.ExecutionAllBean;
 import testtaking.app.com.myapplication.model.LoginOtherBean;
 import testtaking.app.com.myapplication.model.MainQuestion;
 import testtaking.app.com.myapplication.model.MainSubjects;
+import testtaking.app.com.myapplication.model.PracticeQuestionList;
 import testtaking.app.com.myapplication.model.Report;
 import testtaking.app.com.myapplication.model.ReportAllBean;
 import testtaking.app.com.myapplication.model.ReportAllTopicsBean;
 import testtaking.app.com.myapplication.model.ScheduleTestBean;
+import testtaking.app.com.myapplication.model.SiglePracticeQuestion;
 import testtaking.app.com.myapplication.model.SmsStatus;
 import testtaking.app.com.myapplication.model.SelfEnablerRegistration;
 import testtaking.app.com.myapplication.model.HomeQuestionList;
@@ -320,7 +322,13 @@ public interface RequestInterface {
     Call<List<Report>> getReportList(@Field("test_id") String s,
                                      @Field("STUD_ID") String s1);
 
-
+    @FormUrlEncoded
+    @POST("getPracticeQuestionForApp")
+    Call<List<PracticeQuestionList>> getQuestionsList(@Field("import_level_id") int import_level_id,
+                                                      @Field("import_level") String import_level_type);
+    @FormUrlEncoded
+    @POST("getPracticeQuestionDisplayForApp")
+    Call<List<SiglePracticeQuestion>> getIndivisualQuestion(@Field("qnumber")int q_number);
 }
 
 

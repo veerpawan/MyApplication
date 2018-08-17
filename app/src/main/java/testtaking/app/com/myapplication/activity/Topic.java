@@ -591,9 +591,10 @@ public class Topic extends AppCompatActivity implements SwipeRefreshLayout.OnRef
 
             case R.id.llPractice_test:
 
-                Toast.makeText(getApplicationContext(),"SSSS",Toast.LENGTH_LONG).show();
 
                 Intent practiceIntent = new Intent(getApplicationContext(), PracticeTest.class);
+               // Toast.makeText(getApplicationContext(),topic_id+"",Toast.LENGTH_LONG).show();
+
                 practiceIntent.putExtra("level_id", topic_id);
                 practiceIntent.putExtra("level_type", "T");
                 startActivity(practiceIntent);

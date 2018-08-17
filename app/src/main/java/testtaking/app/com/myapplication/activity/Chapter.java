@@ -564,6 +564,18 @@ public class Chapter extends AppCompatActivity implements SwipeRefreshLayout.OnR
                 dialogue_custom.dismiss();
                 break;
 
+            case R.id.llPracticeTest:
+
+                Intent practiceIntent = new Intent(getApplicationContext(), PracticeTest.class);
+                //Toast.makeText(getApplicationContext(),chapter_id+"",Toast.LENGTH_LONG).show();
+
+
+                practiceIntent.putExtra("level_id", chapter_id);
+                practiceIntent.putExtra("level_type", "T");
+                startActivity(practiceIntent);
+                dialogue_custom.dismiss();
+                break;
+
 
         }
     }
