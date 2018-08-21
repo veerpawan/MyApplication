@@ -153,7 +153,7 @@ public class Login extends AppCompatActivity {
 
 
                         //Intent i = new Intent(getApplicationContext(), Subject.class);
-                        Intent i = new Intent(getApplicationContext(),Subject.class);
+                        Intent i = new Intent(getApplicationContext(),BottomNavigationActivity.class);
                         i.putExtra("email_id", email_id);
                         i.putExtra("user_id", user_id);
                         startActivity(i);

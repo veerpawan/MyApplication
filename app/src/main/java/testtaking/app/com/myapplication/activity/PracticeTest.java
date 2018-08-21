@@ -1,5 +1,6 @@
 package testtaking.app.com.myapplication.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.budiyev.android.circularprogressbar.CircularProgressBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +24,7 @@ import testtaking.app.com.myapplication.model.PracticeQuestionList;
 import testtaking.app.com.myapplication.model.SiglePracticeQuestion;
 import testtaking.app.com.myapplication.network.ApiClient;
 import testtaking.app.com.myapplication.network.RequestInterface;
+import testtaking.app.com.myapplication.utils.DialogsUtils;
 
 
 public class PracticeTest extends AppCompatActivity {
@@ -32,7 +36,7 @@ public class PracticeTest extends AppCompatActivity {
 
 
     TextView tv_question, tv_opt_1, tv_opt_2, tv_opt_3, tv_opt_4;
-    Button btn_check, btn_next,btn_exit;
+    Button btn_check, btn_next, btn_exit;
     private int correct_answer;
 
 
@@ -42,6 +46,7 @@ public class PracticeTest extends AppCompatActivity {
     List<PracticeQuestionList> practiceQuestionLists;
 
     List<SiglePracticeQuestion> siglePracticeQuestions;
+    ProgressDialog pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,8 +65,7 @@ public class PracticeTest extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
-                Toast.makeText(getApplicationContext(), correct_answer+"", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), correct_answer + "", Toast.LENGTH_LONG).show();
 
 
             }
@@ -81,7 +85,7 @@ public class PracticeTest extends AppCompatActivity {
         btn_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(),Subject.class);
+                Intent i = new Intent(getApplicationContext(), Subject.class);
                 startActivity(i);
                 finish();
             }
@@ -160,6 +164,12 @@ public class PracticeTest extends AppCompatActivity {
     public void getPerticularQuestion(int val) {
 
 
+        pDialog= DialogsUtils.showProgressDialog(this,"Getting next...");
+
+
+
+
+
         RequestInterface apiService = ApiClient.getClient().create(RequestInterface.class);
         Call<List<SiglePracticeQuestion>> call1 = apiService.getIndivisualQuestion(val);
 
@@ -168,9 +178,11 @@ public class PracticeTest extends AppCompatActivity {
             @Override
 
             public void onResponse(Call<List<SiglePracticeQuestion>> call, Response<List<SiglePracticeQuestion>> response) {
-
+                pDialog.dismiss();
                 if (response.code() == 200) {
-                    siglePracticeQuestions = response.body();
+
+
+                     siglePracticeQuestions = response.body();
                     for (int i = 0; i < siglePracticeQuestions.size(); i++) {
                         tv_opt_1.setText(siglePracticeQuestions.get(i).getOptionGroup().getOption1() + "");
                         tv_opt_2.setText(siglePracticeQuestions.get(i).getOptionGroup().getOption2() + "");
@@ -195,7 +207,7 @@ public class PracticeTest extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<SiglePracticeQuestion>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Not able to connect with web server", Toast.LENGTH_LONG).show();
-
+                pDialog.dismiss();
 
             }
         });
@@ -212,11 +224,12 @@ public class PracticeTest extends AppCompatActivity {
         tv_opt_4 = findViewById(R.id.tv_opt4);
         btn_check = findViewById(R.id.btn_check);
         btn_next = findViewById(R.id.btn_next);
-        btn_exit=findViewById(R.id.btn_close);
+        btn_exit = findViewById(R.id.btn_close);
         ch1 = findViewById(R.id.rd_1);
         ch2 = findViewById(R.id.rd_2);
         ch3 = findViewById(R.id.rd_3);
         ch4 = findViewById(R.id.rd_4);
+
 
 
         Intent i = getIntent();

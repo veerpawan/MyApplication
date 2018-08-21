@@ -1,8 +1,6 @@
 package testtaking.app.com.myapplication.network;
 
-/**
- * Created by Deepak Upadhyay on 18-Aug-16.
- */
+
 public interface URL_Mapping {
 
 

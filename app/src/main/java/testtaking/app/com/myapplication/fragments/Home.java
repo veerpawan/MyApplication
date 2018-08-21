@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 
@@ -29,41 +29,60 @@ import testtaking.app.com.myapplication.network.ApiClient;
 import testtaking.app.com.myapplication.model.HomeQuestionList;
 import testtaking.app.com.myapplication.model.HomeQuestionOptions;
 
+import static android.view.View.GONE;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class Home extends Fragment {
 
     RecyclerView recyclerView;
     HomeAddQuesAdapter homeAddQuesAdapter;
     List<HomeQuestionList> homeQuestionListList;
-    int studentid, studentrole;
-    List<HomeQuestionOptions> homeQuestionListOptions;
+    String studentid, studentrole;
+
+    String user_id;
+    ProgressBar progressBar;
+
 
     public Home() {
-        // Required empty public constructor
+
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+        }
+    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+
+       /* String strtext = getArguments().getString("user_id");
+        Toast.makeText(getActivity(),strtext,Toast.LENGTH_LONG).show();*/
+
+
+        progressBar=getActivity().findViewById(R.id.feed_loading);
+        progressBar.setVisibility(View.VISIBLE);
+
+
         recyclerView =getActivity().findViewById(R.id.home_add_question_recycle);
 
         Intent intent = getActivity().getIntent();
-        studentid = intent.getIntExtra("student_id", 0);
-        studentrole = intent.getIntExtra("student_role", 0);
+        studentid = intent.getStringExtra("user_id");
+      //  studentrole = intent.getIntExtra("student_role", 0);
+
+
+       Toast.makeText(getActivity(),studentid,Toast.LENGTH_LONG).show();
         getdataofallstudentsHome();
 
     }
 
     private void getdataofallstudentsHome() {
 
-        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
-        progressDialog.setMessage("Signing Up...");
-        progressDialog.show();
+
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(ApiClient.BASE_URL)
@@ -78,7 +97,8 @@ public class Home extends Fragment {
         call.enqueue(new Callback<List<HomeQuestionList>>() {
             @Override
             public void onResponse(Call<List<HomeQuestionList>> call, Response<List<HomeQuestionList>> response) {
-                progressDialog.dismiss();
+
+                progressBar.setVisibility(GONE);
                 homeQuestionListList = response.body();
 
                 Log.e("hhh", String.valueOf(response));
@@ -96,7 +116,10 @@ public class Home extends Fragment {
 
             @Override
             public void onFailure(Call<List<HomeQuestionList>> call, Throwable t) {
-                progressDialog.dismiss();
+
+                progressBar.setVisibility(GONE);
+
+
                 Toast.makeText(getActivity(), "Not able to get Connection!", Toast.LENGTH_SHORT).show();
             }
 
@@ -107,6 +130,8 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_home, container, false);
 
 

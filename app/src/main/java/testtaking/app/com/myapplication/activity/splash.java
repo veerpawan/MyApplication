@@ -103,7 +103,10 @@ public class splash extends AppCompatActivity {
 
                 } else if (userID != null) {
 
-                    Intent i = new Intent(getApplicationContext(), Subject.class);
+                    //Intent i = new Intent(getApplicationContext(), Subject.class);
+
+                    Intent i = new Intent(getApplicationContext(), BottomNavigationActivity.class);
+
                     i.putExtra("user_id", userID);
 
                     startActivity(i);
