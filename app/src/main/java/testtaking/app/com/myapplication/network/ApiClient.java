@@ -14,7 +14,7 @@ public class ApiClient {
 
    //public static final String BASE_URL = "https://www.selfenabler.com/";
     //http://192.168.0.30:8081/StudentAssessment2/
-    public static final String BASE_URL = "http://192.168.1.82:8081/StudentAssessment2/";
+    public static final String BASE_URL = "http://192.168.0.29:8081/StudentAssessment2/";
     //public static final String BASE_URL = "http://192.168.0.103:8080/StudentAssessment2/";
     //public static final String BASE_URL2 = "https://www.selfenabler.com/";
     private static Retrofit retrofit = null;

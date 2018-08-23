@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -45,7 +46,7 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
 
         Intent i = getIntent();
         user_id = i.getStringExtra("user_id");
-       // Toast.makeText(getApplicationContext(),user_id,Toast.LENGTH_LONG).show();
+        // Toast.makeText(getApplicationContext(),user_id,Toast.LENGTH_LONG).show();
 
         BottomNavigationView navigation = findViewById(R.id.navigation);
         BottomNavigationViewHelper.disableShiftMode(navigation);
@@ -66,6 +67,7 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.frame_container, fragment)
+                    .addToBackStack("A_B_TAG")
                     .commit();
             return true;
         }
@@ -154,12 +156,11 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
 
             case R.id.navigation_profile:
 
+               /* Intent s_profile = new Intent(getApplicationContext(), StudentProfile.class);
+                startActivity(s_profile);*/
 
-                Intent s_profile = new Intent(getApplicationContext(), StudentProfile.class);
-                startActivity(s_profile);
-               /* toolbar.setTitle("Profile");
                 fragment = new Profile();
-                loadFragment(fragment);*/
+                loadFragment(fragment);
                 return true;
 
         }
@@ -167,5 +168,16 @@ public class BottomNavigationActivity extends AppCompatActivity implements Botto
         return loadFragment(fragment);
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getSupportFragmentManager().findFragmentByTag("Home") != null) {
+            // I'm viewing Fragment C
+            getSupportFragmentManager().popBackStack("A_B_TAG",
+                    FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        } else {
+            super.onBackPressed();
+        }
     }
 }

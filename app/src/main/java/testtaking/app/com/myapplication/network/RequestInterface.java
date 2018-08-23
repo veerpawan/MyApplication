@@ -22,6 +22,7 @@ import testtaking.app.com.myapplication.model.ExecutionAllBean;
 import testtaking.app.com.myapplication.model.LoginOtherBean;
 import testtaking.app.com.myapplication.model.MainQuestion;
 import testtaking.app.com.myapplication.model.MainSubjects;
+import testtaking.app.com.myapplication.model.PostCommetList;
 import testtaking.app.com.myapplication.model.PracticeQuestionList;
 import testtaking.app.com.myapplication.model.Report;
 import testtaking.app.com.myapplication.model.ReportAllBean;
@@ -329,6 +330,12 @@ public interface RequestInterface {
     @FormUrlEncoded
     @POST("getPracticeQuestionDisplayForApp")
     Call<List<SiglePracticeQuestion>> getIndivisualQuestion(@Field("qnumber")int q_number);
+
+
+
+    @FormUrlEncoded
+    @POST("getCommentListForApp")
+    Call<List<PostCommetList>> getCommentList(@Field("postId")String post_id);
 }
 
 

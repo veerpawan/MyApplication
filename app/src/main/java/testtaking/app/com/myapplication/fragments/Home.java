@@ -64,24 +64,20 @@ public class Home extends Fragment {
         Toast.makeText(getActivity(),strtext,Toast.LENGTH_LONG).show();*/
 
 
-        progressBar=getActivity().findViewById(R.id.feed_loading);
+        progressBar = getActivity().findViewById(R.id.feed_loading);
         progressBar.setVisibility(View.VISIBLE);
 
 
-        recyclerView =getActivity().findViewById(R.id.home_add_question_recycle);
+        recyclerView = getActivity().findViewById(R.id.home_add_question_recycle);
 
         Intent intent = getActivity().getIntent();
         studentid = intent.getStringExtra("user_id");
-      //  studentrole = intent.getIntExtra("student_role", 0);
 
-
-       Toast.makeText(getActivity(),studentid,Toast.LENGTH_LONG).show();
         getdataofallstudentsHome();
 
     }
 
     private void getdataofallstudentsHome() {
-
 
 
         Retrofit retrofit = new Retrofit.Builder()

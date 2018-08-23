@@ -18,8 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             app:cardBackgroundColor="@color/grey"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="5dp">
+            app:cardCornerRadius="1dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,7 +47,7 @@
                             android:id="@+id/image_home_mcq_student"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/users"
+                            android:src="@drawable/ic_person_black_24dp"
                             app:civ_border_color="#000000"
                             app:civ_border_width="1dp" />
 
@@ -244,28 +243,32 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="5sp"
-                        android:layout_marginTop="5sp"
+                        android:layout_margin="10sp"
                         android:weightSum="3">
 
                         <TextView
                             android:id="@+id/mcq_attempts"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="left"
                             android:layout_weight="1"
-                            android:gravity="center_horizontal" />
+                            android:gravity="left" />
 
                         <TextView
                             android:id="@+id/mcq_upvote"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center" />
 
                         <TextView
                             android:id="@+id/mcq_comments"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right" />
 
                     </LinearLayout>
 
@@ -284,17 +287,21 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:id="@+id/ll_mcq_like"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="horizontal"
                             android:weightSum="2">
 
+
                             <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:id="@+id/mcq_like_image"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_weight="1"
                                 android:src="@drawable/like" />
+
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -306,6 +313,7 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/ll_mcq_comment"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginRight="5dp"
@@ -314,7 +322,7 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="25sp"
+                                android:layout_width="44dp"
                                 android:layout_height="25sp"
                                 android:layout_weight="1"
                                 android:src="@drawable/comment" />
@@ -372,8 +380,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             app:cardBackgroundColor="@color/grey"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="5dp">
+            app:cardCornerRadius="1dp">
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
@@ -406,7 +413,7 @@
                             android:id="@+id/image_student_queary_home"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/users"
+                            android:src="@drawable/ic_person_black_24dp"
                             app:civ_border_color="#000000"
                             app:civ_border_width="1dp" />
 
@@ -471,11 +478,41 @@
                     </LinearLayout>
 
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10sp"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/query_attempts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left" />
+
+                        <TextView
+                            android:id="@+id/query_upvote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/query_comments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right" />
+
+                    </LinearLayout>
+
+
                     <View
                         android:layout_width="wrap_content"
                         android:layout_height="1dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="30sp"
                         android:background="@color/grey" />
 
                     <LinearLayout
@@ -486,6 +523,7 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:id="@+id/ll_query_like"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -493,8 +531,9 @@
                             android:weightSum="2">
 
                             <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:id="@+id/query_like_image"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_gravity="right"
                                 android:layout_weight="1"
                                 android:src="@drawable/like" />
@@ -510,6 +549,8 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/ll_query_comment"
+
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginRight="5dp"
@@ -577,8 +618,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             app:cardBackgroundColor="@color/grey"
-            app:cardCornerRadius="1dp"
-            app:cardElevation="5dp">
+            app:cardCornerRadius="1dp">
 
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
@@ -609,7 +649,7 @@
                             android:id="@+id/image_student_info_home"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/users"
+                            android:src="@drawable/ic_person_black_24dp"
                             app:civ_border_color="#014302"
                             app:civ_border_width="1dp" />
 
@@ -688,15 +728,18 @@
                         android:weightSum="3">
 
                         <LinearLayout
+                            android:id="@+id/ll_info_like"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:orientation="horizontal"
                             android:weightSum="2">
 
+
                             <ImageView
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"
+                                android:id="@+id/info_like_image"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
                                 android:layout_gravity="right"
                                 android:layout_weight="1"
                                 android:src="@drawable/like" />
@@ -712,6 +755,8 @@
                         </LinearLayout>
 
                         <LinearLayout
+                            android:id="@+id/ll_info_comment"
+
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginRight="5dp"

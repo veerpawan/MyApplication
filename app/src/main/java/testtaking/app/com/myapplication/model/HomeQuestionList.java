@@ -36,6 +36,9 @@ public class HomeQuestionList {
     @SerializedName("upvoteSize")
     private int upvoteSize;
 
+   /* @SerializedName("upvoteSize")
+    private int upvoteSize;
+*/
 
     public int getAttemptSize() {
         return attemptSize;

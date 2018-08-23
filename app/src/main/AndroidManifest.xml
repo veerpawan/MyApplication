@@ -190,7 +190,8 @@
         <activity
             android:name=".activity.BottomNavigationActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity android:name=".activity.UserCommentsList"
+          />
     </application>
 
 </manifest>
